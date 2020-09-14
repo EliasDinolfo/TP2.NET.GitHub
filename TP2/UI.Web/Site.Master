@@ -1,0 +1,31 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="UI.Web.Site" %>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>Academia</title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="bodyForm" runat="server">
+        <asp:Menu Visible="false" runat="server" ID="menu"  Orientation="Horizontal"
+            BackColor="#B5C7DE"
+            DynamicHorizontalOffset="5"
+            Font-Names="Verdana"
+            Font-Size="1.1em"
+            ForeColor="#284E98">
+            <Items>
+                
+            </Items>
+        </asp:Menu>
+        <asp:SiteMapDataSource ID="SiteMapDataSource" runat="server" />
+        <div>
+            <asp:ContentPlaceHolder ID="bodyContentPlaceHolder" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+        <br />
+    <br />
+        <asp:Button Text="Cerrar Sesión" ID="btnCerrarSesion" runat="server" OnClick="btnCerrarSesion_Click" Visible="false"/>
+    </form>
+</body>
+</html>
